@@ -3,9 +3,9 @@ services:
     name: angels-school
     env: node
     plan: free
-    buildCommand: "pnpm install && pnpm build"
-    startCommand: "pnpm start"
+    nodeVersion: 20.15.0   # or the version you run locally (check with node -v)
+    buildCommand: pnpm install && pnpm build
+    startCommand: pnpm start
     envVars:
       - key: NODE_ENV
         value: production
-    nodeVersion: 20
